@@ -1,4 +1,6 @@
-# Mainframe TSO Star Trek (PowerShell)
+# Mainframe TSO Star Trek (PowerShell/TypeScript)
+
+![alt text](image.png)
 
 A retro, command-driven Star Trek game inspired by classic TSO/ISPF gameplay, implemented with **MVC** and selected **GoF patterns**.
 
