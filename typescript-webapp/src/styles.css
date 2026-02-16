@@ -1,0 +1,196 @@
+:root {
+    color-scheme: dark;
+    font-family: Consolas, "Cascadia Code", Menlo, Monaco, "Courier New", monospace;
+    background: #090c11;
+    color: #d7f0ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #132437 0%, #090c11 55%);
+}
+
+.shell {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+header,
+.panel {
+    grid-column: 1 / -1;
+}
+
+header h1 {
+    margin: 0;
+    color: #9be7ff;
+    letter-spacing: 0.04em;
+}
+
+.subtitle {
+    margin: 0.35rem 0 0.8rem;
+    opacity: 0.85;
+}
+
+.status-banner {
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #2b8bb5;
+    border-radius: 8px;
+    background: #0d1620;
+    color: #b8eeff;
+}
+
+.panel {
+    border: 1px solid #20455a;
+    border-radius: 10px;
+    background: #0b141f;
+    padding: 0.9rem;
+}
+
+.panel h2 {
+    margin: 0 0 0.65rem;
+    font-size: 1rem;
+    color: #7ad5ff;
+}
+
+.ship-panel,
+.command-panel {
+    grid-column: span 6;
+}
+
+.grid-panel,
+.log-panel {
+    grid-column: span 6;
+}
+
+.ship-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    line-height: 1.5;
+}
+
+.divider {
+    opacity: 0.5;
+}
+
+.map-grid {
+    display: grid;
+    grid-template-columns: repeat(9, minmax(30px, 1fr));
+    gap: 0.35rem;
+}
+
+.axis-label {
+    min-height: 34px;
+    display: grid;
+    place-items: center;
+    color: #79b8d8;
+    font-weight: 700;
+    border-radius: 6px;
+    background: #0d1825;
+    border: 1px solid #21384b;
+}
+
+.axis-label.corner {
+    background: transparent;
+    border-color: transparent;
+}
+
+.sector-cell {
+    border: 1px solid #29485f;
+    border-radius: 6px;
+    min-height: 34px;
+    display: grid;
+    place-items: center;
+    background: #0f1a28;
+    color: #89b6d1;
+}
+
+.sector-cell.ship {
+    border-color: #5ad5ff;
+    color: #d6f6ff;
+    background: #143447;
+    font-weight: 700;
+}
+
+.sector-cell.enemy {
+    border-color: #ff736a;
+    color: #ffd5d2;
+    background: #3b1e24;
+    font-weight: 700;
+}
+
+.message-log {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.4rem;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.message-log li {
+    border-left: 2px solid #2b8bb5;
+    padding-left: 0.55rem;
+    opacity: 0.95;
+}
+
+.command-help {
+    margin: 0.75rem 0 0;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.command-form {
+    display: flex;
+    gap: 0.55rem;
+}
+
+.command-form input {
+    flex: 1;
+    padding: 0.6rem;
+    border: 1px solid #3f6a83;
+    border-radius: 6px;
+    background: #08111b;
+    color: #d7f0ff;
+}
+
+.command-form button {
+    border: 1px solid #2b8bb5;
+    border-radius: 6px;
+    background: #113147;
+    color: #d7f0ff;
+    padding: 0.6rem 0.9rem;
+    cursor: pointer;
+}
+
+.command-form button:disabled,
+.command-form input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.mission-outcome {
+    margin: 0.75rem 0 0;
+    color: #ffd27c;
+    min-height: 1.2rem;
+}
+
+@media (max-width: 900px) {
+
+    .ship-panel,
+    .command-panel,
+    .grid-panel,
+    .log-panel {
+        grid-column: 1 / -1;
+    }
+}
