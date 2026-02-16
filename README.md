@@ -1,6 +1,16 @@
 # Mainframe TSO Star Trek (PowerShell/TypeScript)
 
-![alt text](image.png)
+## PowerShell Version
+
+PowerShell implementation of a classic Star Trek text-based game, demonstrating **MVC** architecture and various **GoF design patterns**.
+
+![alt text](media/PowerShell-Version.png)
+
+## TypeScript Port
+
+TypeScript CLI and Web versions of the same game, showcasing the same architecture and patterns in a different language and environment.
+  
+![alt text](media/TypeScript-Web-Version.png)
 
 A retro, command-driven Star Trek game inspired by classic TSO/ISPF gameplay, implemented with **MVC** and selected **GoF patterns**.
 
