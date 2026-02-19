@@ -1,5 +1,6 @@
 import { ClassicPhaserStrategy, ClassicTorpedoStrategy } from "../../core/combat/strategies";
 import { GameState, Position } from "../../core/model";
+import { playSoundEffect } from "../../soundPlayer";
 import { IRandom } from "../../core/random";
 
 export interface ControllerPort {
@@ -114,6 +115,8 @@ export class PhaserCommand extends CommandBase {
             return false;
         }
 
+        // Play phaser sound effect
+        playSoundEffect("/soundEffects/tos_phaser_3.mp3");
         const alive = game.currentQuadrant.getAliveKlingons();
         const weights: number[] = [];
         let weightSum = 0;
@@ -183,6 +186,8 @@ export class TorpedoCommand extends CommandBase {
         }
 
         game.ship.torpedoes -= 1;
+        // Play photon torpedo sound effect
+        playSoundEffect("/soundEffects/tos_photon_torpedo_2.mp3");
 
         const target = game.currentQuadrant
             .getAliveKlingons()
